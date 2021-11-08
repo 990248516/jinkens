@@ -52,6 +52,19 @@
             sc = 200;
             break;
     */
+          case "time":
+              var d = new Date();
+              var h = d.getHours();
+              var mi = d.getMinutes();
+              var s = d.getSeconds();
+      
+              result = {
+                "hour": h,
+                "minute": mi,
+                "second": s
+              };
+              sc = 200;
+              break;
           default:
             result = {
               "error": "Must specify 'date' or 'time'."

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/79b4059269.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+    <title>Photo Album</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="title-container">
+            <h1>Photo<br>Album<br></h1>
+        </div>
+        <!-- Search Area -->
+        <div class="search-container">
+            <input type="text" class="search-content" id="searchContent" placeholder="search photos">
+            <button type="submit" class="voice-btn" id="voiceBtn" onClick="speechRecognition()">
+                <i class="fas fa-microphone" class="voice"></i>
+            </button>
+            <button type="submit" class="search-btn" onClick="searchPhoto()">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <!-- Upload Area -->
+        <div class="upload-container">
+            <div class="select-container">
+                <input type="file" id="photoInput" accept="image/png, image/jpg">
+            </div>
+            <div class="label-container">
+                <p>Add custom labels for your uploaded photo:</p>
+                <ul id="labelInput"></ul>
+                <input type="text" id="txt" placeholder="type and Enter ...">
+            </div>
+            <button type="submit" class="upload-btn" onClick="uploadPhoto()">Upload</button>
+        </div>
+
+        <!-- Photo Display Area -->
+        <div class="photo-container" id="photo-container">
+            <p id="imgContent"></p >
+<!--            <div class="image-fullscreen"></div>-->
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>
